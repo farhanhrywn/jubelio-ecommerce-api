@@ -3,13 +3,6 @@ const pagination = async (model, pageSize, pageLimit) => {
 			const limit = parseInt(pageLimit, 10) || 10;
 			const page = parseInt(pageSize, 10) || 1;
 
-
-			let options = {
-					offset: getOffset(page, limit),
-					limit: limit,
-			};
-
-			// take in the model, take in the options
 			let {rowCount, rows} = model;
 
 			return {
