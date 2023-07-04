@@ -16,6 +16,7 @@ const {
 	deleteTransaction
 } = require('./controllers/TransactionController')
 // const db = require('./database')
+require('dotenv').config();
 
 const init = async () => {
     const server = Hapi.server({
